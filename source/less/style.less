@@ -1,6 +1,7 @@
 @import "variables";
 @import "mixins";
 @import "normalize";
+@import "blocks/visually-hidden";
 @import "blocks/header";
 @import "blocks/promo";
 @import "blocks/main-header";
@@ -35,7 +36,7 @@ html {
 body {
   font-family: "Oswald", "Arial", sans-serif;
 
-  width: 320px;
+  min-width: 320px;
 
   margin: auto;
 }
@@ -47,9 +48,4 @@ a {
 img {
   max-width: 100%;
   height: auto;
-}
-
-.visually-hidden {
-  position: absolute;
-  clip: rect(0, 0, 0, 0);
 }
