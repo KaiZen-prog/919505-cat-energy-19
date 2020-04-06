@@ -1,0 +1,51 @@
+@import "variables";
+@import "mixins";
+@import "normalize";
+@import "blocks/visually-hidden";
+@import "blocks/header";
+@import "blocks/promo";
+@import "blocks/main-header";
+@import "blocks/catalogs";
+@import "blocks/advantages";
+@import "blocks/cards";
+@import "blocks/card";
+@import "blocks/view-all";
+@import "blocks/footer";
+@import "blocks/social";
+@import "blocks/copyright";
+@import "blocks/button";
+
+@font-face {
+  font-family: "Oswald";
+  src: url("../fonts/oswaldregular.woff2") format("woff2"), url("../fonts/oswaldregular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Oswald", "Arial", sans-serif;
+
+  min-width: 320px;
+
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
