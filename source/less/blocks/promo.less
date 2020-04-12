@@ -1,13 +1,19 @@
 .promo {
+  position: relative;
+
   padding-bottom: 22px;
 }
 
 .promo__wrapper {
-  position: relative;
-  margin-bottom: 135px;
-  padding: 27px 10px 154px;
+  .block-centered(@mobile-width);
 
-  background: #63a73a url("../img/index-background-mobile@1x.jpg") no-repeat;
+  padding: 27px 10px 0;
+
+  /*
+  background-color: #63a73a;
+  */
+  background: url("../img/index-can-mobile@1x.png") 20px 166px no-repeat,
+    url("../img/index-background-mobile@1x.jpg") no-repeat;
 
   color: @text-color-white;
 }
@@ -16,7 +22,7 @@
   font-size: @font-size-header;
   font-weight: normal;
 
-  line-height: 36px;
+  line-height: @line-height-link-bigger;
 
   text-align: center;
 
@@ -33,11 +39,70 @@
   text-transform: uppercase;
 
   margin-top: 0;
+  margin-bottom: 303px;
 }
 
-.promo__icon {
-  position: absolute;
+@media (min-width: @tablet-width) {
+  .promo {
+    .block-centered(@tablet-width);
 
-  top: 166px;
-  left: 20px;
+    margin-bottom: 9px;
+    padding-bottom: 0;
+  }
+
+  .promo__wrapper {
+    width: @tablet-width;
+
+    margin-left: auto;
+    padding: 47px 230px 520px 118px;
+
+    /*
+    background-color: #63a73a;
+    */
+    background: url("../img/index-can-tablet@1x.jpg") 29px 248px no-repeat;
+
+    color: @text-color-black;
+  }
+
+  .promo__header {
+    font-size: @font-size-header-bigger;
+
+    line-height: @line-height-header;
+
+    text-align: left;
+
+    margin-bottom: 41px;
+  }
+
+  .promo__slogan {
+    font-size: @font-size-link-bigger;
+
+    line-height: @line-height-link;
+
+    text-align: left;
+
+    margin-bottom: 48px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promo {
+    .block-centered(@desktop-width);
+  }
+
+  .promo__wrapper {
+    width: @desktop-width;
+
+    padding: 222px 675px 210px 190px;
+
+    /*
+    background-color: #63a73a;
+    */
+    background: url("../img/index-can-desktop@1x.png") 560px 142px no-repeat,
+      url("../img/index-background-desktop@1x.jpg") 719px 0 no-repeat;
+  }
+
+  .promo__slogan {
+    margin-bottom: 53px;
+  }
 }

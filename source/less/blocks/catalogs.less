@@ -1,14 +1,14 @@
 .catalogs {
+  .block-centered(@mobile-width);
+
   padding-right: 20px;
   padding-left: 20px;
 }
 
 .catalogs__list {
-  list-style: none;
+  .list-style-off();
 
-  margin-top: 0;
   margin-bottom: -20px;
-  padding: 0;
 }
 
 .catalogs__item {
@@ -32,7 +32,7 @@
 }
 
 .catalogs__description {
-  .block__description-font-arial(@font-size-description, @line-height-description, @text-color-grey);
+  .block__description-font(@font-family-arial, @font-size-description, @line-height-description, @text-color-grey);
 
   margin-top: 0;
   margin-bottom: 19px;
@@ -42,11 +42,83 @@
 }
 
 .catalogs__link {
-  font-size: @font-size-link;
-
-  line-height: 16px;
-
-  color: #000000;
+  .block__description-font(@font-family-oswald, @font-size-link, 16px, @text-color-black);
 
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .catalogs {
+    .block-centered(@tablet-width);
+
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  .catalogs__list {
+    margin-bottom: -30px;
+  }
+
+  .catalogs__item {
+    margin-bottom: 30px;
+    padding: 76px 280px 60px 52px;
+
+    &--narrow {
+      padding-right: 315px;
+    }
+  }
+
+  .catalogs__name {
+    font-size: @font-size-header;
+
+    margin-bottom: 25px;
+    padding-left: 0;
+  }
+
+  .catalogs__description {
+    .block__description-font(@font-family-arial, @font-size-link, 24px, @text-color-black);
+
+    margin-bottom: 35px;
+
+    border: none;
+  }
+
+  .catalogs__link {
+    .block__description-font(@font-family-oswald, @font-size-link-bigger, @line-height-link, @text-color-black);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalogs {
+    .block-centered(@desktop-width);
+
+    padding-top: 58px;
+    padding-right: 110px;
+    padding-left: 110px;
+  }
+
+  .catalogs__list {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-right: -80px;
+  }
+
+  .catalogs__item {
+    width: 570px;
+
+    margin-right: 80px;
+    padding-right: 52px;
+  }
+
+  .catalogs__name {
+    font-size: @font-size-header;
+
+    margin-bottom: 74px;
+    margin-left: 162px;
+  }
+
+  .catalogs__description {
+    margin-bottom: 10px;
+  }
 }

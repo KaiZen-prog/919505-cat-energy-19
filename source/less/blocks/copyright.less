@@ -6,7 +6,7 @@
 }
 
 .copyright__link {
-  .block__description-font-arial(@font-size-link, 16px, @text-color-grey);
+  .block__description-font(@font-family-arial, @font-size-link, 16px, @text-color-grey);
 
   margin-top: 10px;
   margin-bottom: 0;
@@ -22,4 +22,24 @@
   background: url("../img/htmlacademy.svg") no-repeat;
   background-position-x: 7px;
   background-position-y: -2px;
+}
+
+@media (min-width: @tablet-width) {
+  .copyright {
+    width: 173px;
+
+    margin-left: auto;
+    padding-top: 2px;
+    padding-right: 10px;
+  }
+
+  .copyright__link {
+    padding-right: 5px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .copyright {
+    padding-top: 4px;
+  }
 }

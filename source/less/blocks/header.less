@@ -1,12 +1,15 @@
 .header {
   position: relative;
+
+  .block-centered(@mobile-width);
+}
+
+.header__nav {
+  position: relative;
 }
 
 .header__list {
-  list-style: none;
-
-  padding: 0;
-  margin: 0;
+  .list-style-off();
 }
 
 .header__block {
@@ -15,7 +18,7 @@
   padding: 22px 10px 23px;
 
   &--main {
-    padding: 12px 0 14px;
+    padding: 11px 0 14px;
   }
 }
 
@@ -30,11 +33,16 @@
   text-align: center;
   text-transform: uppercase;
 
-  color: #000000;
+  color: @text-color-black;
 }
 
 .header__logo {
-  padding-left: 20px;
+  display: block;
+
+  min-height: 40px;
+
+  background: url("../img/logo-mobile.svg") 20px 0 no-repeat;
+  background-size: 190px auto;
 
   &:hover {
     opacity: 0.8;
@@ -42,5 +50,114 @@
 
   &:active {
     opacity: 0.6;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .header {
+    .block-centered(@tablet-width);
+
+    padding: 24px 20px 10px 30px;
+  }
+
+  .header__nav {
+    display: flex;
+  }
+
+  .header__list {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-right: -15px;
+  }
+
+  .header__block {
+    border: none;
+
+    margin-right: 15px;
+    padding: 8px 0 0;
+
+    &--main {
+      margin-right: 27px;
+      padding-top: 0;
+      padding-right: 30px;
+    }
+  }
+
+  .header__link {
+    font-size: 18px;
+    font-weight: normal;
+
+    line-height: 24.86px;
+
+    padding: 10px;
+  }
+
+  .header__logo {
+    display: block;
+
+    min-width: 202px;
+    height: 59px;
+
+    background: url("../img/logo-tablet.svg") no-repeat;
+    background-size: 173px auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  @absolute-left: 110px;
+
+  .header {
+    .block-centered(@desktop-width);
+
+    padding: 0;
+  }
+
+  .header__nav {
+    padding: 54px 10px 10px 110px;
+
+    &--index {
+      position: absolute;
+
+      z-index: 1;
+
+      top: 54px;
+      left: @absolute-left;
+
+      width: @desktop-width - @absolute-left;
+
+      padding-top: 0;
+      padding-left: 0;
+    }
+  }
+
+  .header__list {
+    width: 603px;
+
+    margin-right: -14px;
+  }
+
+  .header__block {
+    margin-right: 14px;
+    padding: 10px 0 0 0;
+
+    &--main {
+      margin-right: auto;
+      padding-top: 0;
+      padding-right: 30px;
+    }
+  }
+
+  .header__link {
+    font-size: 20px;
+
+    &--index {
+      color: @text-color-white;
+    }
+  }
+
+  .header__logo {
+    background: url("../img/logo-desktop.svg") no-repeat;
+    background-size: 202px auto;
   }
 }

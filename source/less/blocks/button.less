@@ -31,3 +31,36 @@
     color: @text-color-grey;
   }
 }
+
+@media (min-width: @tablet-width) {
+  .button {
+    &--promo {
+      font-size: @font-size-link-bigger;
+
+      line-height: @line-height-link;
+
+      width: 245px;
+
+      margin-left: 1px;
+      padding: 15px 10px 17px;
+    }
+
+    &--card,
+    &--view-all {
+      width: 250px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .button {
+    &--promo {
+      margin-left: 0;
+    }
+
+    &--card,
+    &--view-all {
+      width: 170px;
+    }
+  }
+}

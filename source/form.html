@@ -6,17 +6,15 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header>
-      <nav class="header">
-        <button class="header__toggle" type="button">Открыть меню</button>
+    <header class="header">
+      <nav class="header__nav">
+        <button class="header__toggle visually-hidden" type="button">Открыть меню</button>
 
-        <ul class="header__list site-list">
-          <li class="header__block header__block--main">
-            <a class="header__logo" href="index.html">
-              <img class="header__logo-image" src="img/logo-mobile.svg" width="190" height="38" alt="Кэт энерджи">
-            </a>
-          </li>
+        <div class="header__block header__block--main">
+          <a class="header__logo" href="index.html"></a>
+        </div>
 
+        <ul class="header__list">
           <li class="header__block">
             <a class="header__link" href="index.html">Главная</a>
           </li>
@@ -35,36 +33,38 @@
     <main></main>
 
     <footer class="footer">
-      <a class="footer__logo" href="index.html">
-        <img src="img/logo-footer.svg" width="128" height="24" alt="Кэт энерджи">
-      </a>
+      <div class="footer__wrapper">
+        <a class="footer__logo" href="#nowhere">
+          <img src="img/logo-footer.svg" width="128" height="24" alt="Кэт энерджи">
+        </a>
 
-      <div class="social">
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="#howhere">
-              <span class="visually-hidden">В контакте</span>
-            </a>
-          </li>
+        <div class="social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--vkontakte" href="#howhere">
+                <span class="visually-hidden">В контакте</span>
+              </a>
+            </li>
 
-          <li class="social__item">
-            <a class="social__link social__link--instagram" href="#howhere">
-              <span class="visually-hidden">Инстаграм</span>
-            </a>
-          </li>
+            <li class="social__item">
+              <a class="social__link social__link--instagram" href="#howhere">
+                <span class="visually-hidden">Инстаграм</span>
+              </a>
+            </li>
 
-          <li class="social__item">
-            <a class="social__link social__link--facebook" href="#howhere">
-              <span class="visually-hidden">Фейсбук</span>
-            </a>
-          </li>
-        </ul>
-      </div>
+            <li class="social__item">
+              <a class="social__link social__link--facebook" href="#howhere">
+                <span class="visually-hidden">Фейсбук</span>
+              </a>
+            </li>
+          </ul>
+        </div>
 
-      <div class="copyright">
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        <div class="copyright">
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
 
-        <a class="copyright__icon" href="https://htmlacademy.ru/intensive/adaptive"></a>
+          <a class="copyright__icon" href="https://htmlacademy.ru/intensive/adaptive"></a>
+        </div>
       </div>
     </footer>
   </body>
