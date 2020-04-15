@@ -46,3 +46,37 @@
     background-size: 10px 19px;
   }
 }
+
+@media (min-width: @tablet-width) {
+  .social {
+    border: none;
+  }
+
+  .social__list {
+    width: 255px;
+
+    padding-top: 0;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+
+  .social__link {
+    width: 40px;
+    height: 40px;
+
+    margin-left: 11px;
+
+    &--vkontakte::before {
+      background-size: 30px 17px;
+    }
+
+    &--instagram::before {
+      background-size: 25px 23px;
+      background-position-x: 75%;
+    }
+
+    &--facebook::before {
+      background-size: 16px 28px;
+    }
+  }
+}

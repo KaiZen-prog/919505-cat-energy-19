@@ -1,6 +1,40 @@
 .cards {
-  list-style: none;
+  .block-centered(@mobile-width);
+}
 
-  margin: 0;
-  padding: 0;
+.cards__list {
+  .list-style-off();
+}
+
+@media (min-width: @tablet-width) {
+  .cards {
+    .block-centered(@tablet-width);
+
+    padding-top: 137px;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  .cards__list {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-right: -60px;
+    margin-bottom: -140px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .cards {
+    .block-centered(@desktop-width);
+
+    padding-top: 137px;
+    padding-right: 110px;
+    padding-left: 110px;
+  }
+
+  .cards__list {
+    margin-right: -80px;
+    margin-bottom: -143px;
+  }
 }

@@ -1,5 +1,5 @@
-.block__description-font-arial(@font-size; @line-height; @text-color) {
-  font-family: "Arial", sans-serif;
+.block__description-font(@font-family; @font-size; @line-height; @text-color) {
+  font-family: @font-family;
   font-size: @font-size;
 
   line-height: @line-height;
@@ -9,4 +9,44 @@
 
 .block__border-bottom() {
   border-bottom: 1px solid #d9d9d9;
+}
+
+.list-style-off() {
+  list-style: none;
+
+  padding: 0;
+  margin: 0;
+}
+
+.block-centered(@width) {
+  width: @width;
+  margin: auto;
+}
+
+.zero-centered() {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.generate-numbers(@n) when (@n > 0) {
+  &--@{n}::before {
+    content: "@{n}";
+
+    position: absolute;
+
+    top: -40px;
+    left: 115px;
+    z-index: -1;
+
+    .block__description-font(@font-family-oswald, 281.07px, 281.07px, #f2f2f2);
+
+    width: 30px;
+    height: 300px;
+  }
+
+  .generate-numbers(@n - 1);
 }
