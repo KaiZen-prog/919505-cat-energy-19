@@ -1,0 +1,445 @@
+.before-after {
+  position: relative;
+
+  background-color: @bg-color-whitegrey;
+}
+
+.before-after__wrapper {
+  .block-centered(@mobile-width);
+
+  padding: 17px 18px 26px;
+}
+
+.before-after__slogan {
+  .block__description-font(@font-family-arial, @font-size-description, @line-height-description, @text-color-black);
+
+  width: 279px;
+
+  margin-top: 0;
+  margin-bottom: 25px;
+  margin-left: 2px;
+}
+
+.before-after__list {
+  .list-style-off();
+
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-right: -30px;
+  margin-bottom: 14px;
+  margin-left: 2px;
+}
+
+.before-after__item {
+  position: relative;
+
+  margin-right: 32px;
+  margin-bottom: 20px;
+  padding: 13px 10px 17px;
+
+  border: 1px solid #cfcfcf;
+  border-radius: 3px;
+}
+
+.before-after__parameter {
+  font-size: 24px;
+
+  line-height: 24px;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  width: 102px;
+
+  margin: 0;
+}
+
+.before-after__description {
+  .block__description-font(@font-family-arial, 12px, 12px, @text-color-black);
+
+  position: absolute;
+  bottom: -16px;
+  left: 16px;
+
+  text-align: center;
+
+  width: 87px;
+
+  margin: 0;
+  padding-right: 5px;
+  padding-left: 5px;
+
+  background-color: @bg-color-whitegrey;
+}
+
+.before-after__line {
+  display: flex;
+  justify-content: center;
+}
+
+.before-after__cost {
+  font-size: @font-size-description;
+
+  line-height: @line-height-link;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  margin: 0;
+
+  &:first-child {
+    margin-right: 3px;
+  }
+}
+
+.before-after__slide {
+  height: 274px;
+
+  &--1 {
+    background: url("../img/before-mobile@1x.png") -18px 34px no-repeat;
+  }
+
+  &--2 {
+    background: url("../img/after-mobile@1x.png") -18px 34px no-repeat;
+  }
+
+  &--hidden {
+    display: none;
+  }
+}
+
+.before-after__indicators {
+  display: flex;
+  align-items: center;
+
+  padding: 32px 12px 10px 45px;
+}
+
+.before-after__legend {
+  font-size: @font-size-link;
+
+  line-height: @line-height-link;
+
+  text-transform: uppercase;
+
+  margin: 0;
+}
+
+.before-after__tracker {
+  width: 84px;
+
+  margin-right: 17px;
+  margin-left: 19px;
+  padding: 3px 5px;
+
+  background-color: #ffffff;
+
+  border: 1px solid #cdcdcd;
+  border-radius: 6px;
+}
+
+.before-after__track {
+  width: 35px;
+
+  border: 3px solid @bg-color-green;
+  border-radius: 6px;
+}
+
+.before-after__pin {
+  display: none;
+}
+
+.before-after__background {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .before-after {
+    display: flex;
+
+    background-color: #ffffff;
+
+    border-top: 1px solid #e6e6e6;
+  }
+
+  .before-after__wrapper {
+    .block-centered(@tablet-width);
+
+    padding: 43px 30px 64px;
+
+    background-color: transparent;
+
+    z-index: 2;
+  }
+
+  .before-after__slogan {
+    font-size: @font-size-link;
+
+    line-height: 24px;
+
+    width: 700px;
+
+    margin-bottom: 52px;
+    margin-left: 0;
+  }
+
+  .before-after__parameters {
+    display: flex;
+  }
+
+  .before-after__list {
+    .list-style-off();
+
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 408px;
+
+    margin-right: auto;
+  }
+
+  .before-after__item {
+    margin-right: 42px;
+    padding-top: 15px;
+    padding-bottom: 18px;
+
+    border-color: #cdcdcd;
+  }
+
+  .before-after__parameter {
+    font-size: 30px;
+
+    line-height: 37.02px;
+
+    width: 140px;
+  }
+
+  .before-after__description {
+    bottom: -6px;
+    left: 23px;
+
+    font-size: @font-size-description;
+
+    line-height: 14px;
+
+    width: 114px;
+
+    background-color: #ffffff;
+
+    &--days {
+      left: 9px;
+
+      width: 142px;
+    }
+  }
+
+  .before-after__line {
+    display: block;
+  }
+
+  .before-after__cost {
+    font-size: @font-size-link-bigger;
+
+    line-height: @line-height-link;
+
+    text-align: right;
+
+    width: 200px;
+
+    margin: 0;
+    padding-top: 12px;
+
+    &:first-child {
+      margin: 0;
+    }
+
+    &:last-child {
+      padding-top: 9px;
+    }
+  }
+
+  .before-after__slides {
+    display: flex;
+  }
+
+  .before-after__slide {
+    width: 50%;
+    height: 585px;
+
+    &--1 {
+      background: url("../img/before-tablet@1x.png") 16px 66px no-repeat;
+      background-size: 690px auto;
+    }
+
+    &--2 {
+      display: block;
+
+      background: url("../img/after-tablet@1x.png") -338px 66px no-repeat;
+    }
+  }
+
+  .before-after__indicators {
+    padding: 18px 68px 10px;
+  }
+
+  .before-after__legend {
+    font-size: @font-size-link-bigger;
+  }
+
+  .before-after__tracker {
+    position: relative;
+
+    width: 429px;
+
+    margin-left: 24px;
+    margin-right: 20px;
+
+    background-color: #dcdcdc;
+
+    border: none;
+  }
+
+  .before-after__track {
+    display: none;
+  }
+
+  .before-after__pin {
+    position: absolute;
+
+    top: -13px;
+    left: 200px;
+
+    display: block;
+
+    box-sizing: content-box;
+
+    width: 8px;
+    height: 8px;
+
+    padding: 0;
+
+    background-color: @bg-color-green;
+
+    border: 12px solid #ffffff;
+    border-radius: 50%;
+
+    box-shadow: 0 1px 3px 2px #cfcfcf;
+
+    cursor: pointer;
+  }
+
+  .before-after__background {
+    position: absolute;
+    bottom: 0;
+
+    display: flex;
+
+    width: 100%;
+    height: 462px;
+
+    &--left {
+      width: 50%;
+
+      background-color: @bg-color-whitegrey;
+    }
+
+    &--right {
+      width: 50%;
+
+      background-color: #eaeaea;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .before-after {
+    border: none;
+  }
+
+  .before-after__wrapper {
+    .block-centered(@desktop-width);
+
+    display: flex;
+    justify-content: flex-start;
+
+    padding: 0 40px 74px;
+  }
+
+  .before-after__left-block {
+    margin-right: 135px;
+    padding-top: 70px;
+  }
+
+  .before-after__slogan {
+    width: 435px;
+
+    margin-bottom: 68px;
+  }
+
+  .before-after__parameters {
+    display: block;
+  }
+
+  .before-after__description {
+    background-color: @bg-color-whitegrey;
+  }
+
+  .before-after__list {
+    margin-bottom: 40px;
+  }
+
+  .before-after__line {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .before-after__cost {
+    text-align: left;
+
+    width: 180px;
+    padding-top: 0;
+
+    &:first-child {
+      margin-right: 58px;
+    }
+
+    &:last-child {
+      padding-top: 0;
+    }
+  }
+
+  .before-after__slide {
+    height: 573px;
+
+    &--1 {
+      width: 365px;
+
+      background: url("../img/before-desktop@1x.png") 0 15px no-repeat;
+    }
+
+    &--2 {
+      width: 285px;
+
+      background: url("../img/after-desktop@1x.png") -365px 15px no-repeat;
+    }
+  }
+
+  .before-after__indicators {
+    padding: 0 80px 0;
+  }
+
+  .before-after__pin {
+    left: 199px;
+  }
+
+  .before-after__background {
+    &--left {
+      width: calc(50% + 325px);
+    }
+
+    &--right {
+      width: calc(50% - 325px);
+    }
+  }
+}
