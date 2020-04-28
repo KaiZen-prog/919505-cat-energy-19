@@ -1,0 +1,133 @@
+.map {
+  position: relative;
+
+  background-color: #fdf7ef;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+
+    width: 100%;
+    height: 114px;
+
+    background-color: @bg-color-whitegrey;
+  }
+
+  &--index {
+    &::before {
+      background-color: #ffffff;
+    }
+  }
+}
+
+.map__address {
+  background-color: @bg-color-whitegrey;
+
+  &--index {
+    background-color: #ffffff;
+  }
+}
+
+.map__wrapper {
+  .block-centered(@mobile-width);
+
+  position: relative;
+
+  height: 476px;
+
+  background: url("../img/bg-map-mobile@1x.png") 0 76px no-repeat;
+}
+
+.map__pin {
+  position: absolute;
+  top: 253px;
+  left: 129px;
+
+  width: 62px;
+  height: 65px;
+
+  background-color: transparent;
+  background-image: url("../img/map-pin.png");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.map__frame {
+  position: absolute;
+
+  top: 114px;
+
+  width: 100%;
+}
+
+@media (min-width: @tablet-width) {
+  .map {
+    &::before {
+      height: 201px;
+    }
+  }
+
+  .map__wrapper {
+    .block-centered(@tablet-width);
+
+    height: 597px;
+
+    background: url("../img/bg-map-tablet@1x.png") 0 197px no-repeat;
+  }
+
+  .map__pin {
+    top: 347px;
+    left: 322px;
+
+    width: 124px;
+    height: 120px;
+  }
+
+  .map__frame {
+    top: 201px;
+
+    height: 396px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .map {
+    position: relative;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .map__address {
+    background-color: #ffffff;
+  }
+
+  .map__wrapper {
+
+    width: 1440px;
+    height: 400px;
+
+    margin: auto;
+
+    background: url("../img/bg-map-desktop@1x.png") 0 0 no-repeat;
+  }
+
+  .map__pin {
+    top: 150px;
+    left: 998px;
+
+    width: 124px;
+    height: 120px;
+  }
+
+  .map__frame {
+    top: 0;
+
+    height: 400px;
+
+    z-index: 2;
+  }
+}
