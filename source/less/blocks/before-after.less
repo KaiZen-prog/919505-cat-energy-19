@@ -73,7 +73,7 @@
   background-color: @bg-color-whitegrey;
 }
 
-.before-after__line {
+.before-after__expenses {
   display: flex;
   justify-content: center;
 }
@@ -150,10 +150,6 @@
   display: none;
 }
 
-.before-after__background {
-  display: none;
-}
-
 @media (min-width: @tablet-width) {
   .before-after {
     display: flex;
@@ -161,6 +157,31 @@
     background-color: #ffffff;
 
     border-top: 1px solid #e6e6e6;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      bottom: 0;
+
+      width: 50%;
+      height: 462px;
+
+      background-color: @bg-color-whitegrey;
+    }
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      bottom: 0;
+      right: 0;
+
+      width: 50%;
+      height: 462px;
+
+      background-color: #eaeaea;
+    }
   }
 
   .before-after__wrapper {
@@ -234,7 +255,7 @@
     }
   }
 
-  .before-after__line {
+  .before-after__expenses {
     display: block;
   }
 
@@ -328,33 +349,19 @@
 
     cursor: pointer;
   }
-
-  .before-after__background {
-    position: absolute;
-    bottom: 0;
-
-    display: flex;
-
-    width: 100%;
-    height: 462px;
-
-    &--left {
-      width: 50%;
-
-      background-color: @bg-color-whitegrey;
-    }
-
-    &--right {
-      width: 50%;
-
-      background-color: #eaeaea;
-    }
-  }
 }
 
 @media (min-width: @desktop-width) {
   .before-after {
     border: none;
+
+    &::before {
+      width: calc(50% + 325px);
+    }
+
+    &::after {
+      width: calc(50% - 325px);
+    }
   }
 
   .before-after__wrapper {
@@ -366,7 +373,7 @@
     padding: 0 40px 74px;
   }
 
-  .before-after__left-block {
+  .before-after__info {
     margin-right: 135px;
     padding-top: 70px;
   }
@@ -389,7 +396,7 @@
     margin-bottom: 40px;
   }
 
-  .before-after__line {
+  .before-after__expenses {
     display: flex;
     justify-content: flex-start;
   }
@@ -431,15 +438,5 @@
 
   .before-after__pin {
     left: 199px;
-  }
-
-  .before-after__background {
-    &--left {
-      width: calc(50% + 325px);
-    }
-
-    &--right {
-      width: calc(50% - 325px);
-    }
   }
 }

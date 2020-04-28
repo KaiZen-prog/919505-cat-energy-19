@@ -1,4 +1,4 @@
-.address__wrapper {
+.address {
   .block-centered(@mobile-width);
 
   display: flex;
@@ -33,7 +33,7 @@
 }
 
 @media (min-width: @tablet-width) {
-  .address__wrapper {
+  .address {
     .block-centered(@tablet-width);
 
     padding: 64px 71px 58px;
@@ -81,14 +81,12 @@
     bottom: 104px;
     left: 110px;
 
-    z-index: 2;
-  }
-
-  .address__wrapper {
     width: 570px;
     height: 201px;
 
     padding: 65px 76px 26px;
+
+    z-index: 2;
   }
 
   .address__street,
