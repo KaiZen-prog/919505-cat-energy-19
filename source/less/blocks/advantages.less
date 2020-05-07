@@ -27,16 +27,41 @@
   display: flex;
 
   margin-bottom: 20px;
-}
 
-.advantages__icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  &::before {
+    content: "";
 
-  width: 60px;
-  height: 60px;
-  background: @bg-color-green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 60px;
+    height: 60px;
+  }
+
+  &--1 {
+    &::before {
+      background: @bg-color-green url("../img/advantage-leaf@1x.png") 5px 5px no-repeat;
+    }
+  }
+
+  &--2 {
+    &::before {
+      background: @bg-color-green url("../img/advantage-powder@1x.png") 5px 4px no-repeat;
+    }
+  }
+
+  &--3 {
+    &::before {
+      background: @bg-color-green url("../img/advantage-dining@1x.png") 4px 5px no-repeat;
+    }
+  }
+
+  &--4 {
+    &::before {
+      background: @bg-color-green url("../img/advantage-clock@1x.png") 5px 5px no-repeat;
+    }
+  }
 }
 
 .advantages__description {
@@ -47,6 +72,39 @@
   margin: 0;
   padding-top: 2px;
   padding-left: 20px;
+}
+
+@media (min-resolution: @retina-dpi),
+  (min-resolution: @retina-dppx) {
+  .advantages__item {
+    &--1 {
+      &::before {
+        background-image: @bg-color-green url("../img/advantage-leaf@2x.png") 5px 5px no-repeat;
+        background-size: 50px auto;
+      }
+    }
+
+    &--2 {
+      &::before {
+        background: @bg-color-green url("../img/advantage-powder@2x.png") 5px 4px no-repeat;
+        background-size: 50px auto;
+      }
+    }
+
+    &--3 {
+      &::before {
+        background: @bg-color-green url("../img/advantage-dining@2x.png") 4px 5px no-repeat;
+        background-size: 50px auto;
+      }
+    }
+
+    &--4 {
+      &::before {
+        background: @bg-color-green url("../img/advantage-clock@2x.png") 5px 5px no-repeat;
+        background-size: 50px auto;
+      }
+    }
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -73,6 +131,7 @@
 
   .advantages__item {
     position: relative;
+
     display: block;
 
     width: 324px;
@@ -81,11 +140,13 @@
     margin-bottom: 133px;
 
     .generate-numbers(4);
-  }
 
-  .advantages__icon {
-    width: 80px;
-    height: 80px;
+    &::before {
+      width: 80px;
+      height: 80px;
+
+      background-position: 15px 15px;
+    }
   }
 
   .advantages__description {

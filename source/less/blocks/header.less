@@ -8,6 +8,66 @@
   position: relative;
 }
 
+.header__toggle {
+  position: absolute;
+  top: 23px;
+  right: 19px;
+
+  display: block;
+  width: 25px;
+  height: 25px;
+
+  padding: 0;
+
+  background-color: transparent;
+
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.header__nav--closed .header__toggle::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 24px;
+  height: 2px;
+
+  background-color: #222222;
+  box-shadow: 0 8px 0 0 #222222, 0 16px 0 0 #222222;
+}
+
+.header__nav--opened .header__toggle {
+  top: 20px;
+  right: 20px;
+
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 11px;
+    left: 1px;
+
+    width: 24px;
+    height: 2px;
+
+    background-color: #000000;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
 .header__list {
   .list-style-off();
 }
@@ -19,7 +79,7 @@
 
   &--main {
     display: flex;
-    padding: 17px 0 14px;
+    padding: 11px 0 14px;
   }
 }
 
@@ -56,6 +116,16 @@
   width: 190px;
 }
 
+@media (max-width: @mobile-width-only) {
+  .header__nav--closed .header__block--secondary {
+    display: none;
+  }
+
+  .header__nav--nojs .header__toggle {
+    display: none;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .header {
     .block-centered(@tablet-width);
@@ -75,18 +145,23 @@
     display: flex;
     flex-wrap: wrap;
 
-    margin-right: -15px;
+    width: 482px;
+
+    margin-right: -34px;
+    margin-left: auto;
   }
 
   .header__block {
     border: none;
 
-    margin-right: 15px;
     padding: 8px 0 0;
 
     &--main {
-      margin-right: 86px;
       padding-top: 0;
+    }
+
+    &--secondary {
+      margin-right: 34px;
     }
   }
 
@@ -96,7 +171,20 @@
 
     line-height: 24.86px;
 
-    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 8px;
+
+    &--current {
+      box-shadow: @bg-color-green 0 2px 0;
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   .header__logo {
@@ -139,13 +227,13 @@
   }
 
   .header__list {
-    width: 532px;
+    width: 523px;
 
     margin-right: -14px;
   }
 
   .header__block {
-    margin-right: 14px;
+    margin-right: 35px;
     padding: 10px 0 0 0;
 
     &--main {
@@ -160,6 +248,10 @@
 
     &--index {
       color: @text-color-white;
+    }
+
+    &--index--current {
+      box-shadow: #ffffff 0 2px 0;
     }
   }
 
