@@ -24,23 +24,11 @@ try {
   isStorageSupport = false;
 }
 
-if (petNameStorage) {
+if (isStorageSupport) {
   petNameField.value = petNameStorage;
-}
-
-if (petWeightStorage) {
   petWeightField.value = petWeightStorage;
-}
-
-if (petAgeStorage) {
   petAgeField.value = petAgeStorage;
-}
-
-if (emailStorage) {
   emailField.value = emailStorage;
-}
-
-if (phoneStorage) {
   phoneField.value = phoneStorage;
 }
 
