@@ -5,7 +5,7 @@
     <title>Подбор программы</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
 
   <body>
@@ -52,12 +52,12 @@
             <div class="form__block form__block--upper form__block--bordered">
               <p class="form__line">
                 <label class="form__text" for="pet-name">Имя:*</label>
-                <input class="form__input" id="pet-name" type="text" name="pet-name" placeholder="Барсик" required>
+                <input class="form__input" id="pet-name" type="text" name="pet-name" placeholder="Барсик" required="">
               </p>
 
               <p class="form__line">
                 <label class="form__text form__text--weight" for="pet-weight">Вес (кг):*</label>
-                <input class="form__input" id="pet-weight" type="number" name="pet-weight" value="7" min="1" step="1" required>
+                <input class="form__input" id="pet-weight" type="number" name="pet-weight" value="7" min="1" step="1" required="">
               </p>
 
               <p class="form__line">
@@ -69,7 +69,7 @@
             <ul class="form__list form__block form__block--upper form__block--bordered">
               <li class="form__item">
                 <label class="form__checker form__text">
-                  <input class="visually-hidden" type="radio" name="food-type" value="Похудение" checked>
+                  <input class="visually-hidden" type="radio" name="food-type" value="Похудение" checked="">
                   <span class="form__indicator form__indicator--radio">Похудение</span>
                 </label>
               </li>
@@ -97,19 +97,19 @@
           <div class="form__block form__block--user">
             <p class="form__line">
               <label class="form__text form__text--email" for="email">E-mail:*</label>
-              <input class="form__input form__input--shorter" id="email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
+              <input class="form__input form__input--shorter" id="email" type="email" name="email" placeholder="kuklachev@gmail.com" required="">
 
               <svg class="form__icon" width="17" height="15">
-                <use xlink:href="img/sprite.svg#icon-mail"></use>
+                <use xlink:href="img/sprite.svg#icon-mail__sprite"></use>
               </svg>
             </p>
 
             <p class="form__line">
               <label class="form__text form__text--phone" for="phone">Телефон:*</label>
-              <input class="form__input form__input--shorter" id="phone" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
+              <input class="form__input form__input--shorter" id="phone" type="tel" name="phone" placeholder="8 (960) 900-60-90" required="">
 
               <svg class="form__icon form__icon--phone" width="17" height="15">
-                <use xlink:href="img/sprite.svg#icon-phone"></use>
+                <use xlink:href="img/sprite.svg#icon-phone__sprite"></use>
               </svg>
             </p>
           </div>
@@ -131,7 +131,7 @@
             <ul class="form__list form__list--checker">
               <li class="form__item form__item--checker">
                 <label class="form__checker form__text">
-                  <input class="visually-hidden" type="checkbox" value="Сахарозаменитель" name="extra-goods" checked>
+                  <input class="visually-hidden" type="checkbox" value="Сахарозаменитель" name="extra-goods" checked="">
                   <span class="form__indicator form__indicator--checkbox">Сахарозаменитель</span>
                 </label>
               </li>
@@ -194,12 +194,12 @@
           <div class="map__pin"></div>
         </div>
 
-        <iframe class="map__frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" height="362" allowfullscreen></iframe>
+        <iframe class="map__frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" height="362" allowfullscreen=""></iframe>
       </section>
     </main>
 
     <footer class="footer">
-      <div class="footer__wrapper footer__wrapper--index">
+      <div class="footer__wrapper">
         <a class="footer__logo" href="index.html">
           <img src="img/logo-footer.svg" width="128" height="24" alt="Кэт энерджи">
         </a>
@@ -209,7 +209,7 @@
             <li class="social__item">
               <a class="social__link" href="#howhere">
                 <svg class="social__icon social__icon--vkontakte" width="22" height="12">
-                  <use xlink:href="img/sprite.svg#icon-vk"></use>
+                  <use xlink:href="img/sprite.svg#icon-vk__sprite"></use>
                 </svg>
               </a>
             </li>
@@ -217,7 +217,7 @@
             <li class="social__item">
               <a class="social__link" href="#howhere">
                 <svg class="social__icon social__icon--instagram" width="16" height="16">
-                  <use xlink:href="img/sprite.svg#icon-insta"></use>
+                  <use xlink:href="img/sprite.svg#icon-insta__sprite"></use>
                 </svg>
               </a>
             </li>
@@ -225,7 +225,7 @@
             <li class="social__item">
               <a class="social__link" href="#howhere">
                 <svg class="social__icon social__icon--facebook" width="10" height="19">
-                  <use xlink:href="img/sprite.svg#icon-fb"></use>
+                  <use xlink:href="img/sprite.svg#icon-fb__sprite"></use>
                 </svg>
               </a>
             </li>
@@ -237,17 +237,17 @@
 
           <a class="copyright__link copyright__link--icon" href="https://htmlacademy.ru/intensive/adaptive">
             <svg class="copyright__icon" width="41" height="41">
-              <use xlink:href="img/sprite.svg#htmlacademy"></use>
+              <use xlink:href="img/sprite.svg#htmlacademy__sprite"></use>
             </svg>
           </a>
         </div>
       </div>
     </footer>
 
-    <script src="js/picturefill.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/form.js"></script>
-    <script src="js/svg4everybody.legacy.js"></script>
+    <script src="js/picturefill.min.js"></script>
+    <script src="js/app.min.js"></script>
+    <script src="js/form.min.js"></script>
+    <script src="js/svg4everybody.legacy.min.js"></script>
     <script>svg4everybody();</script>
   </body>
 </html>
