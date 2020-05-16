@@ -9,7 +9,7 @@
     &::after {
       .green-line();
 
-      bottom: 194px;
+      top: 22px;
       left: calc(50% + 61px);
     }
   }
@@ -22,7 +22,7 @@
     padding-bottom: 0;
 
     &::after {
-      bottom: 203px;
+      top: 17px;
       left: calc(50% + 2px);
     }
   }
@@ -31,7 +31,7 @@
     padding-bottom: 22px;
 
     &::after {
-      bottom: 233px;
+      top: 31px;
       left: calc(50% + 24px);
     }
   }
@@ -277,6 +277,10 @@
 .form__checker {
   margin: 0;
 
+  & input:focus + .form__indicator::before {
+    border-color: #bababa;
+  }
+
   & input:disabled + .form__indicator {
     opacity: 0.4;
 
@@ -341,22 +345,22 @@
       &::before {
         .green-line();
 
-        bottom: 260px;
+        top: 77px;
       }
 
       &::after {
-        bottom: 260px;
+        top: 77px;
         left: calc(50% + 239px);
       }
     }
 
     &--comment {
       &::before {
-        bottom: 292px;
+        top: 38px;
       }
 
       &::after {
-        bottom: 292px;
+        top: 38px;
         left: calc(50% - 95px);
       }
     }
@@ -365,11 +369,11 @@
       padding-bottom: 15px;
 
       &::before {
-        bottom: 234px;
+        top: 56px;
       }
 
       &::after {
-        bottom: 234px;
+        top: 56px;
         left: calc(50% - 62px);
       }
     }
@@ -599,22 +603,22 @@
       &::before {
         .green-line();
 
-        bottom: 189px;
+        top: 51px;
       }
 
       &::after {
-        bottom: 189px;
+        top: 51px;
         left: calc(50% - 57px);
       }
     }
 
     &--comment {
       &::before {
-        bottom: 293px;
+        top: 39px;
       }
 
       &::after {
-        bottom: 293px;
+        top: 39px;
         left: calc(50% - 391px);
       }
     }
@@ -623,11 +627,11 @@
       padding-bottom: 15px;
 
       &::before {
-        bottom: 138px;
+        top: 57px;
       }
 
       &::after {
-        bottom: 138px;
+        top: 57px;
         left: calc(50% - 358px);
       }
     }
@@ -750,5 +754,65 @@
     .block-centered(@desktop-width);
 
     padding: 31px 430px 82px 41px;
+  }
+}
+
+@-moz-document url-prefix("") {
+  .form__fieldset {
+    &--lined {
+      &::after {
+        top: -57px;
+      }
+    }
+
+    &--comment {
+      &::after {
+        top: -34px;
+      }
+    }
+
+    &--extra {
+      &::after {
+        top: -22px;
+      }
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    .form__fieldset {
+      &--lined,
+      &--comment {
+        &::before,
+        &::after {
+          top: -44px;
+        }
+      }
+
+      &--extra {
+        &::before,
+        &::after {
+          top: -42px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    .form__fieldset {
+      &--lined,
+      &--comment {
+        &::before,
+        &::after {
+          top: -24px;
+        }
+      }
+
+      &--extra {
+        &::before,
+        &::after {
+          top: -22px;
+        }
+      }
+    }
   }
 }

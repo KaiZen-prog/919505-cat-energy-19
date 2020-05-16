@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <link href="css/style.min.css" rel="stylesheet">
+    <link href="fonts/oswaldregular.woff2" rel="preload" as="font">
   </head>
 
   <body>
@@ -14,7 +15,7 @@
         <button class="header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
 
         <div class="header__block header__block--main">
-          <a class="header__logo" href="index.html">
+          <a class="header__logo" href="index.html" aria-label="На главную Кэт энерджи">
             <picture>
               <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
               <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
@@ -434,8 +435,8 @@
           <div class="additional__block">
             <ul class="additional__list">
               <li class="additional__item card card--additional">
-                <div class="card__wrapper--additional">
-                  <h2 class="card__name card__name--additional"><a class="card__link" href="#nowhere">Сахарозаменитель</a></h2>
+                <div class="card__wrapper card__wrapper--additional">
+                  <h3 class="card__name card__name--additional"><a class="card__link" href="#nowhere">Сахарозаменитель</a></h3>
 
                   <table class="card__parameters card__parameters--additional">
                     <tr class="card__parameter card__parameter--additional">
@@ -454,8 +455,8 @@
               </li>
 
               <li class="additional__item card card--additional">
-                <div class="card__wrapper--additional">
-                  <h2 class="card__name card__name--additional"><a class="card__link" href="#nowhere">Питьевая вода</a></h2>
+                <div class="card__wrapper card__wrapper--additional">
+                  <h3 class="card__name card__name--additional"><a class="card__link" href="#nowhere">Питьевая вода</a></h3>
 
                   <table class="card__parameters card__parameters--additional">
                     <tr class="card__parameter card__parameter--additional">
@@ -474,8 +475,8 @@
               </li>
 
               <li class="additional__item card card--additional">
-                <div class="card__wrapper--additional">
-                  <h2 class="card__name card__name--additional"><a class="card__link" href="#nowhere">Молоко</a></h2>
+                <div class="card__wrapper card__wrapper--additional">
+                  <h3 class="card__name card__name--additional"><a class="card__link" href="#nowhere">Молоко</a></h3>
 
                   <table class="card__parameters card__parameters--additional">
                     <tr class="card__parameter card__parameter--additional">
@@ -494,8 +495,8 @@
               </li>
 
               <li class="additional__item card card--additional">
-                <div class="card__wrapper--additional">
-                  <h2 class="card__name card__name--additional"><a class="card__link" href="#nowhere">Витамины</a></h2>
+                <div class="card__wrapper card__wrapper--additional">
+                  <h3 class="card__name card__name--additional"><a class="card__link" href="#nowhere">Витамины</a></h3>
 
                   <table class="card__parameters card__parameters--additional">
                     <tr class="card__parameter card__parameter--additional">
@@ -558,14 +559,14 @@
 
     <footer class="footer">
       <div class="footer__wrapper footer__wrapper--catalog">
-        <a class="footer__logo" href="index.html">
+        <a class="footer__logo" href="index.html" aria-label="На главную Кэт энерджи">
           <img src="img/logo-footer.svg" width="128" height="24" alt="Кэт энерджи">
         </a>
 
         <div class="social">
           <ul class="social__list">
             <li class="social__item">
-              <a class="social__link" href="#howhere">
+              <a class="social__link" href="#howhere" aria-label="Наш Вконтакте">
                 <svg class="social__icon social__icon--vkontakte" width="22" height="12">
                   <use xlink:href="img/sprite.svg#icon-vk__sprite"></use>
                 </svg>
@@ -573,7 +574,7 @@
             </li>
 
             <li class="social__item">
-              <a class="social__link" href="#howhere">
+              <a class="social__link" href="#howhere" aria-label="Наш Инстаграм">
                 <svg class="social__icon social__icon--instagram" width="16" height="16">
                   <use xlink:href="img/sprite.svg#icon-insta__sprite"></use>
                 </svg>
@@ -581,7 +582,7 @@
             </li>
 
             <li class="social__item">
-              <a class="social__link" href="#howhere">
+              <a class="social__link" href="#howhere" aria-label="Наш Фейсбук">
                 <svg class="social__icon social__icon--facebook" width="10" height="19">
                   <use xlink:href="img/sprite.svg#icon-fb__sprite"></use>
                 </svg>
@@ -593,7 +594,7 @@
         <div class="copyright">
           <a class="copyright__link copyright__link--text" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
 
-          <a class="copyright__link copyright__link--icon" href="https://htmlacademy.ru/intensive/adaptive">
+          <a class="copyright__link copyright__link--icon" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">
             <svg class="copyright__icon" width="41" height="41">
               <use xlink:href="img/sprite.svg#htmlacademy__sprite"></use>
             </svg>

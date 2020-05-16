@@ -45,7 +45,7 @@ if (i === fields.length) {
 formSubmitButton.addEventListener("click", function (evt) {
   for (i = 0; i < fields.length; i++) {
     if (!fields[i].value) {
-      fields[i].classList.add('form__input--error');
+      fields[i].classList.add("form__input--error");
     }
   }
 
